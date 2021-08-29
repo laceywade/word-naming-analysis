@@ -8,7 +8,7 @@ ibex.full<-read.csv(file.choose(), header=T)
 ### Keep only lines with filenames
 ibex<-ibex.full[ibex.full$Parameter=="Filename",]
 ### Create filenames
-ibex$files<-str_replace(ibex$filename, ".wav", ".txt") #If your soundfiles are save as something other than .wav, adjust this here
+ibex$files<-str_replace(ibex$filename, ".wav", ".txt") #If your soundfiles are saved as something other than .wav, adjust this here
 
 ### Create tab-delimited transcript files in working directory
 for (row in 1:nrow(ibex)) {
